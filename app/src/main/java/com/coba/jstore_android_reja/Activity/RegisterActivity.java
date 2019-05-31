@@ -1,4 +1,4 @@
-package com.coba.jstore_android_reja;
+package com.coba.jstore_android_reja.Activity;
 
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.coba.jstore_android_reja.R;
+import com.coba.jstore_android_reja.Request.RegisterRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;

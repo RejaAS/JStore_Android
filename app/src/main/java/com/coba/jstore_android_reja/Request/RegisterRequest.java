@@ -1,4 +1,4 @@
-package com.coba.jstore_android_reja;
+package com.coba.jstore_android_reja.Request;
 
 import android.util.Log;
 import android.widget.EditText;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
-    private static final String Regis_URL = "http://10.0.2.2:8080/newcustomer";
+    private static final String Regis_URL = "http://192.168.43.221:8080/newcustomer";
     private Map<String, String> params;
 
     public RegisterRequest(String name,String username, String email, String password, Response.Listener<String> Listener){

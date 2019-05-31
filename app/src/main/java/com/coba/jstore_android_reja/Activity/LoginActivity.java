@@ -1,4 +1,4 @@
-package com.coba.jstore_android_reja;
+package com.coba.jstore_android_reja.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,13 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.coba.jstore_android_reja.Request.LoginRequest;
+import com.coba.jstore_android_reja.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LoginActivity extends AppCompatActivity {
+public class  LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                                 AlertDialog.Builder builder1 = new AlertDialog.Builder(LoginActivity.this);
                                 builder1.setMessage("Login Success!").create().show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                intent.putExtra("id_customer", jsonResponse.getInt("id"));
+                                intent.putExtra("name", jsonResponse.getString("name"));
                                 startActivity(intent);
                             }
                         } catch (JSONException e){

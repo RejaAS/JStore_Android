@@ -1,4 +1,4 @@
-package com.coba.jstore_android_reja;
+package com.coba.jstore_android_reja.Models;
 
 public class Supplier {
     private int id;
